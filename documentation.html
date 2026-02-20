@@ -13,6 +13,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/doc.css">
+    <link rel="stylesheet" href="assets/css/gal.css">
 </head>
 <body>
     <div class="layout">
@@ -31,8 +32,8 @@
                     <li style="margin-top: 1rem; font-size: 0.8rem; text-transform: uppercase; color: #999;">Navigation
                     </li>
                     <li><a href="#week-12" class="active">Current Sprint</a></li>
-                    <li><a href="#midterm">Midterm Review</a></li>
-                    <li><a href="#setup">Initial Setup</a></li>
+                    <!-- <li><a href="#midterm">Midterm Review</a></li>
+                    <li><a href="#setup">Initial Setup</a></li> -->
                 </ul>
             </nav>
 
@@ -49,7 +50,7 @@
 
         <main>
             <div class="doc-header">
-                <h1>Internship Log & Blog</h1>
+                <h1>Dev Logs</h1>
                 <p class="doc-meta">Status: <span style="color: green;">● Active</span> | Duration: 12 Weeks</p>
                 <p style="margin-top: 1rem; max-width: 600px;">
                     This page documents my daily learnings, bug fixes, and architectural decisions during my internship.
@@ -57,52 +58,44 @@
                 </p>
             </div>
 
-            <article class="log-entry" id="week-12">
-                <span class="log-date">Weeks 09 - 12</span>
-                <h2><span class="tag feat">FEATURE</span> Final Polish & Deployment</h2>
+            <article class="log-entry" id="setup">
+                <span class="log-date">Week 01</span>
+                <h2><span class="tag">SETUP</span> Onboarding & Environment Setup</h2>
                 <div class="log-body">
                     <p>
-                        Moving towards the final stages of the internship. Focused on optimizing database queries and
-                        deploying the application to a live server.
+                        Introduction to the team and setting up the development environment (VS
+                        Code, XAMPP, Git).
                     </p>
-                    <p><strong>Key Achievements:</strong></p>
-                    <ul>
-                        <li>Migrated local MySQL database to a cloud instance.</li>
-                        <li>Implemented JWT (JSON Web Tokens) for secure API authentication.</li>
-                        <li>Fixed the responsive layout issues on mobile devices.</li>
-                    </ul>
-                    
-                    <img src="images/jwt-flow-placeholder.jpg" alt="JWT Authentication Flow">
-                    <p class="image-caption">Fig 4. Secure API authentication flow using JWTs</p>
-
-                    <pre>
-// Optimization: Added Indexing to Search Query
-ALTER TABLE students ADD INDEX (last_name);
-// Result: Query time reduced from 0.4s to 0.02s</pre>
+                    <!-- <img src="assets/docs/" alt="Documentation of week 1"> -->
                 </div>
             </article>
 
-            <article class="log-entry" id="midterm">
-                <span class="log-date">Weeks 05 - 08</span>
-                <h2><span class="tag bug">DEBUGGING</span> The Session Management Issue</h2>
+            <article class="log-entry" id="week-2">
+                <span class="log-date">Week 02</span>
+                <h2>Requirement Gathering & Database Design</h2>
                 <div class="log-body">
                     <p>
-                        Encountered a critical bug where the user session would persist even after clicking "Logout."
-                        This was a security risk.
+                        Requirement gathering. Created the ERD (Entity Relationship Diagram)
+                        for the database.
                     </p>
+                    
+                    <!-- <img src="images/erd-placeholder.jpg" alt="Entity Relationship Diagram for Database">
+                    <p class="image-caption">Fig 1. Initial ERD draft for database structure</p> -->
+                </div>
+            </article>
+
+            <article class="log-entry" id="week-3">
+                <span class="log-date">Week 03</span>
+                <h2>Frontend Boilerplate & Routing</h2>
+                <div class="log-body">
                     <p>
-                        After two days of debugging, I realized the browser cache was storing the authenticated state. I
-                        implemented a cache-control header in PHP to force a refresh on logout.
+                        Started the initial boilerplate for the frontend using HTML/CSS and
+                        basic PHP routing.
                     </p>
-
-                    <img src="images/cache-debugging-placeholder.jpg" alt="Browser Cache Debugging">
-                    <p class="image-caption">Fig 3. Identifying the persistent session state in the browser</p>
-
                     <pre>
-// PHP Fix for Cache Clearing
-header("Cache-Control: no-cache, no-store, must-revalidate");
-header("Pragma: no-cache");
-header("Expires: 0");</pre>
+                        git init
+                        git remote add origin https://github.com/Johan/project.git
+                        git push -u origin main </pre>
                 </div>
             </article>
 
@@ -124,49 +117,7 @@ header("Expires: 0");</pre>
                         than complex, "clever" code.
                     </p>
                 </div>
-            </article>
-
-            <article class="log-entry" id="week-3">
-                <span class="log-date">Week 03</span>
-                <h2>Frontend Boilerplate & Routing</h2>
-                <div class="log-body">
-                    <p>
-                        Started the initial boilerplate for the frontend using HTML/CSS and
-                        basic PHP routing.
-                    </p>
-                    <pre>
-git init
-git remote add origin https://github.com/Johan/project.git
-git push -u origin main</pre>
-                </div>
-            </article>
-
-            <article class="log-entry" id="week-2">
-                <span class="log-date">Week 02</span>
-                <h2>Requirement Gathering & Database Design</h2>
-                <div class="log-body">
-                    <p>
-                        Requirement gathering. Created the ERD (Entity Relationship Diagram)
-                        for the database.
-                    </p>
-                    
-                    <img src="images/erd-placeholder.jpg" alt="Entity Relationship Diagram for Database">
-                    <p class="image-caption">Fig 1. Initial ERD draft for database structure</p>
-                </div>
-            </article>
-
-            <article class="log-entry" id="setup">
-                <span class="log-date">Week 01</span>
-                <h2><span class="tag">SETUP</span> Onboarding & Environment Setup</h2>
-                <div class="log-body">
-                    <p>
-                        Introduction to the team and setting up the development environment (VS
-                        Code, XAMPP, Git).
-                    </p>
-                    <img src="images/erd-placeholder.jpg" alt="Documentation of week 1">
-                </div>
-            </article>
-
+            </article>                                
         </main>
     </div>
 
