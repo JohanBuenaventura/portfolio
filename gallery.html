@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photography | Johan Buenaventura</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="assets/css/styles.css"> 
+    <link rel="stylesheet" href="assets/css/gal.css">
+</head>
+<body>
+    <div class="layout">
+
+        <aside>
+            <div class="profile-img-container">
+                <img src="images/Johan.png" alt="Profile">
+            </div>
+            <div class="identity">
+                <h1>Johan B.</h1>
+                <p>Developer & Photographer</p>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="documentation.html"><i class="fas fa-folder-open"></i> Dev Logs</a></li>
+                    <li><a href="gallery.html" class="active" style="color: var(--accent);"><i class="fas fa-camera"></i> Photo Gallery</a></li>
+                </ul>
+            </nav>
+
+            <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2rem;">
+                <p>A visual timeline of my internship, organized week by week.</p>
+            </div>
+        </aside>
+
+        <main>
+            <div class="doc-header">
+                <h1>Internship Gallery</h1>
+                <p class="doc-meta"><i class="fas fa-image"></i> Weeks 01 - 12</p>
+                <p style="margin-top: 1rem; max-width: 600px;">
+                    While my Dev Logs cover the technical descriptions of what I did, this gallery is a purely visual diary of my everyday progress and environment at St. Joseph.
+                </p>
+            </div>
+
+            <section class="weekly-gallery" style="margin-bottom: 4rem;">
+                <h2 style="margin-bottom: 0.5rem; font-size: 1.8rem; color: var(--text-main);">Week 1: Onboarding & Setup</h2>
+                
+                <div class="week-description" style="margin-bottom: 2rem; color: var(--text-muted); line-height: 1.6; border-left: 3px solid var(--accent); padding-left: 1rem; max-width: 800px;">
+                    <p>My first week at St. Joseph was all about getting familiar with the environment. I set up my local development workspace, met the rest of the team, and started planning out our initial coding phases. The highlight was definitely getting to know the workflow during our morning standups.</p>
+                </div>
+                
+                <div class="photo-grid">
+                    
+                    <figure class="photo-card">
+                        <img src="assets/docs/week1.jpg" alt="Week 1 Day 1 Setup">
+                        <figcaption>
+                            <div class="photo-title">Day 1: Workspace</div>
+                            <div class="photo-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> St Joseph</span>
+                                <span>Feb 18, 2026</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="photo-card">
+                        <img src="assets/docs/week1pic2.jpg" alt="Week 1 Day 1 Alternate">
+                        <figcaption>
+                            <div class="photo-title">Day 1: Software Installation</div>
+                            <div class="photo-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> St Joseph</span>
+                                <span>Feb 18, 2026</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="photo-card">
+                        <img src="assets/docs/day3-1.jpg" alt="Week 1 Day 2 Work">
+                        <figcaption>
+                            <div class="photo-title">Day 2: Morning Standup</div>
+                            <div class="photo-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> St Joseph</span>
+                                <span>Feb 20, 2026</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="photo-card">
+                        <img src="assets/docs/day3.jpg" alt="Week 1 Day 2 Work alternate">
+                        <figcaption>
+                            <div class="photo-title">Day 2: First Lines of Code</div>
+                            <div class="photo-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> St Joseph</span>
+                                <span>Feb 20, 2026</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                </div>
+            </section>
+
+            <hr style="border: 0; height: 1px; background: var(--border); margin: 3rem 0;">
+
+            <section class="weekly-gallery" style="margin-bottom: 4rem;">
+                <h2 style="margin-bottom: 0.5rem; font-size: 1.8rem; color: var(--text-main);">Week 2: Database Design</h2>
+                
+                <div class="week-description" style="margin-bottom: 2rem; color: var(--text-muted); line-height: 1.6; border-left: 3px solid var(--accent); padding-left: 1rem; max-width: 800px;">
+                    <p>This week we dove into the architecture. I spent a lot of time mapping out Entity Relationship Diagrams and structuring the backend before writing the actual models.</p>
+                </div>
+                
+                <div class="photo-grid">
+                    </div>
+            </section> 
+
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Journal | Johan Buenaventura</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="assets/css/doc.css"> 
+    <link rel="stylesheet" href="assets/css/blog.css">
+</head>
+<body>
+    <div class="layout">
+
+        <aside>
+            <div class="profile-img-container">
+                <img src="images/Johan.png" alt="Profile">
+            </div>
+            <div class="identity">
+                <h1>Johan B.</h1>
+                <p>Writing & Thoughts</p>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="documentation.html"><i class="fas fa-folder-open"></i> Dev Logs</a></li>
+                    <li><a href="gallery.html" class="active" style="color: var(--accent);"><i class="fas fa-camera"></i> Weekly Gallery</a></li>
+                </ul>
+            </nav>
+
+            <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 2rem;">
+                <p>A weekly visual diary of my 12-week internship journey, captured through my lens.</p>
+            </div>
+        </aside>
+
+        <main>
+            <div class="doc-header">
+                <h1>Internship Photo Journal</h1>
+                <p class="doc-meta">Duration: 12 Weeks</p>
+                <p style="margin-top: 1rem; max-width: 600px;">
+                    Behind the scenes of my internship. Here is a week-by-week visual documentation of the office, the setup, and the moments between coding.
+                </p>
+            </div>
+
+            <section class="weekly-gallery" id="week-1">
+                <div class="week-header">
+                    <span class="log-date">Week 01</span>
+                    <h2>Onboarding & First Impressions</h2>
+                    <p class="week-desc">Meeting the team, setting up my workstation, and getting familiar with the office environment in Zamboanga. A lot of coffee was consumed this week!</p>
+                </div>
+
+                <div class="photo-grid">
+                    <figure class="photo-card">
+                        <img src="images/w1-desk.jpg" alt="My new desk setup">
+                        <figcaption>First day workstation setup</figcaption>
+                    </figure>
+                    <figure class="photo-card">
+                        <img src="images/w1-team.jpg" alt="Team meeting">
+                        <figcaption>Morning stand-up with the dev team</figcaption>
+                    </figure>
+                    <figure class="photo-card">
+                        <img src="images/w1-coffee.jpg" alt="Coffee mug next to laptop">
+                        <figcaption>Fueling up for environment configuration</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <hr class="week-divider">
+
+            <section class="weekly-gallery" id="week-2">
+                <div class="week-header">
+                    <span class="log-date">Week 02</span>
+                    <h2>Diving into the Codebase</h2>
+                    <p class="week-desc">This week was all about understanding the existing architecture. I spent most of my time whiteboarding database relationships and reviewing old pull requests.</p>
+                </div>
+
+                <div class="photo-grid">
+                    <figure class="photo-card">
+                        <img src="images/w2-whiteboard.jpg" alt="Whiteboard full of diagrams">
+                        <figcaption>Sketching out the Entity Relationship Diagram</figcaption>
+                    </figure>
+                    <figure class="photo-card">
+                        <img src="images/w2-lunch.jpg" alt="Lunch with coworkers">
+                        <figcaption>Team lunch break at Pueblo</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Johan Buenaventura |Web Portfolio</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<div class="layout">
+  
+  <aside>
+    
+    <div class="profile-img-container">
+      <img src="images/Johan.png" alt="Johan Buenaventura">
+    </div>
+
+    <div class="identity">
+      <h1>Johan<br>Buenaventura</h1>
+      <p>Developer</p>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#about"><i class="far fa-user"></i> About</a></li>
+        <li><a href="#skills"><i class="fas fa-code"></i> Tech Stack</a></li>
+        <li><a href="#projects"><i class="fas fa-layer-group"></i> Projects</a></li>
+        <li><a href="documentation.html" style="color: var(--accent);"><i class="fas fa-book"></i> Documentation</a></li>
+        <li><a href="gallery.html" class="active"><i class="fas fa-pen-nib"></i> Blog</a></li>
+        
+      </ul>
+    </nav>
+
+    <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+      <p><i class="fas fa-map-marker-alt"></i> Zamboanga City</p>
+      <p><a href="mailto:hanjobuenaventura@gmail.com" style="color:inherit; text-decoration:none;"><i class="fas fa-envelope"></i> Email Me</a></p>
+    </div>
+
+    <a href="documentation.html" class="btn-docs">
+      <i class="fas fa-folder-open"></i> Read Dev Logs
+    </a>
+
+  </aside>
+
+  <main>
+    
+    <section id="about">
+      <span class="section-label">01. Profile</span>
+      <h2>About Me</h2>
+      <p>
+        I am a student at Western Mindanao State University. My focus is on backend logic, database architecture, and building systems that solve actual problems.
+      </p>
+      <p>
+        Currently, I am documenting my entire learning process. I believe a portfolio should show the mistakes and the debugging process, not just the polished final product.
+      </p>
+    </section>
+
+    <section id="skills">
+      <span class="section-label">02. Stack</span>
+      <h2>Technologies</h2>
+      <div class="project-grid">
+        <div class="card">
+          <h3><i class="fas fa-terminal"></i> Core</h3>
+          <p>C++, Python, Java, Kotlin</p>
+        </div>
+        <div class="card">
+          <h3><i class="fas fa-globe"></i> Web</h3>
+          <p>HTML/CSS, JS, PHP, Django</p>
+        </div>
+        <div class="card">
+          <h3><i class="fas fa-database"></i> Data</h3>
+          <p>MySQL</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <span class="section-label">03. Works</span>
+      <h2>Featured Projects</h2>
+
+      <div class="project-grid">
+        <div class="card">
+          <h3>Online Quiz System</h3>
+          <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span></div>
+          <p>Timed exams with automated scoring.</p>
+          <div class="link-group">
+            <a href="https://github.com/JohanBuenaventura/Online-Quiz">GitHub <i class="fas fa-external-link-alt"></i></a>
+            <a href="screenshot.html">Read Docs</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Learn In Flash</h3>
+          <div class="tags"><span class="tag">Full Stack</span><span class="tag">Dashboard</span></div>
+          <p>Role-based learning platform.</p>
+          <div class="link-group">
+            <a href="https://github.com/devilarence/Learn-in-Flash">GitHub <i class="fas fa-external-link-alt"></i></a>
+            <a href="documentation.html#learn-flash">Read Docs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="docs-preview">
+      <span class="section-label">04. Progress</span>
+      <h2>Latest Documentation</h2>
+      <p>I maintain detailed logs of my coding challenges and solutions.</p>
+      
+      <div class="doc-preview">
+        <h3><i class="fas fa-file-code"></i> Recent Log: Database Optimization</h3>
+        <p style="font-size: 0.9rem; margin-bottom: 10px;">
+          Documenting how I reduced query time in the Quiz System by indexing foreign keys...
+        </p>
+        <a href="documentation.html" class="doc-link">Continue Reading →</a>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+</body>
+</html>

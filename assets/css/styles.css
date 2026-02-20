@@ -1,0 +1,138 @@
+   /* --- VARIABLES --- */
+    :root {
+      --bg-color: #f8f9fa;
+      --card-bg: #ffffff;
+      --text-main: #1a1a1a;
+      --text-muted: #555555;
+      --accent: #2563eb; 
+      --border: #e2e8f0;
+      --sidebar-width: 320px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    /* --- LAYOUT --- */
+    .layout {
+      display: grid;
+      grid-template-columns: var(--sidebar-width) 1fr;
+      min-height: 100vh;
+      max-width: 1600px;
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 0 50px rgba(0,0,0,0.05);
+    }
+
+    /* --- SIDEBAR (Fixed) --- */
+    aside {
+      background: #f1f5f9; /* Slightly darker than main bg for contrast */
+      padding: 2.5rem;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    /* PROFILE IMAGE STYLE */
+    .profile-img-container {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 1.5rem;
+      border-radius: 50%; /* Circle */
+      overflow: hidden;
+      border: 3px solid white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .profile-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .identity h1 { font-size: 1.8rem; font-weight: 800; line-height: 1.1; margin-bottom: 0.5rem; }
+    .identity p { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--accent); margin-bottom: 2rem; }
+
+    /* SIDEBAR NAV */
+    nav ul { list-style: none; margin-bottom: 2rem; }
+    nav li { margin-bottom: 0.8rem; }
+    nav a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 600;
+      transition: color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    nav a:hover, nav a.active { color: var(--text-main); }
+    nav a i { width: 20px; text-align: center; }
+
+    /* DOCS BUTTON */
+    .btn-docs {
+      display: inline-block;
+      background: var(--text-main);
+      color: white;
+      padding: 0.8rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-top: auto; /* Pushes to bottom */
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .btn-docs:hover { transform: translateY(-2px); background: #000; }
+
+    /* --- MAIN CONTENT --- */
+    main { padding: 4rem 5rem; }
+    section { margin-bottom: 5rem; max-width: 900px; }
+
+    h2 { font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; display: inline-block; }
+    .section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--text-muted); display: block; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px; }
+
+    /* PROJECT CARDS */
+    .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .card {
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      border-radius: 8px;
+      background: white;
+      transition: 0.2s;
+    }
+    .card:hover { border-color: var(--accent); box-shadow: 0 4px 20px rgba(37, 99, 235, 0.1); }
+    .card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .card .tags { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    .card .tag { font-size: 0.7rem; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; font-family: 'JetBrains Mono', monospace; }
+    
+    .link-group { margin-top: 1rem; font-size: 0.9rem; }
+    .link-group a { color: var(--accent); text-decoration: none; font-weight: 600; margin-right: 15px; }
+
+    /* DOCUMENTATION PREVIEW SECTION */
+    .doc-preview {
+      background: #f8fafc;
+      border-left: 4px solid var(--accent);
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+    .doc-preview h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+    .doc-link { color: var(--text-main); text-decoration: underline; font-weight: 600; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; }
+      aside { height: auto; position: relative; padding: 2rem; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 2rem; }
+      .btn-docs { margin-top: 0; width: 100%; }
+      main { padding: 2rem; }
+      .profile-img-container { width: 80px; height: 80px; margin-bottom: 0; }
+    }
